@@ -3,7 +3,7 @@
   "name": "Characters Engine",
   "version": "1.0.0",
   "author": "ct",
-  "description": "Engine characters subsystem: the character and action-card factories (entity kinds 'character' and 'action'), the avatar factory and the character panel UI. Replaces the former Core/Characters factories and Core/UI/CharacterPanel — the CharactersModInitializer publishes kernel contracts (ICharacterTemplateProvider, IActionTemplateProvider, IAvatarProvider) so core code resolves templates without referencing this assembly.",
+  "description": "Characters engine: heroes, companions and enemies with their battle attributes and action cards, the character actions panel and dialog portraits.",
   "category": "engine, library",
   "sources": [
     "src/**/*.cs"
