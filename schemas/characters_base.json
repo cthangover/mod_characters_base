@@ -91,6 +91,40 @@
           "Type": "ref_list",
           "Kind": "action",
           "Name": "characters/schema/field/actions"
+        },
+        {
+          "Key": "Loot",
+          "Type": "list",
+          "Name": "characters/schema/field/loot",
+          "Description": "characters/schema/field/loot_desc",
+          "Of": [
+            {
+              "Key": "ItemId",
+              "Type": "ref",
+              "Kind": "item",
+              "Required": true,
+              "Name": "characters/schema/field/loot_item"
+            },
+            {
+              "Key": "MinCount",
+              "Type": "int",
+              "Default": "1",
+              "Name": "characters/schema/field/loot_min"
+            },
+            {
+              "Key": "MaxCount",
+              "Type": "int",
+              "Default": "1",
+              "Name": "characters/schema/field/loot_max"
+            },
+            {
+              "Key": "Probability",
+              "Type": "int",
+              "Default": "100",
+              "Name": "characters/schema/field/loot_probability",
+              "Description": "characters/schema/field/loot_probability_desc"
+            }
+          ]
         }
       ]
     },
