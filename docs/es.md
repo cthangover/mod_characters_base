@@ -23,7 +23,7 @@ Un personaje puede aparecer de tres maneras, y cada una viene de un sitio difere
 
 1. **Retrato de diálogo (avatar)** — una imagen en la carpeta `avatars/` de un mod, elegida línea a línea en el escenario: `text "…" first=marao/sad` ocupa el primer puesto de retrato y `second=…` el segundo (para un diálogo entre dos personas). No está ligado a la definición del personaje.
 2. **Imagen de personaje** — el `Image` de la definición, mostrado en las cartas de este panel y en los combates.
-3. **Sprite de mapa (charset)** — el sprite que camina por los mapas de tiles; lo elige el mod RPG (el ajuste **Appearance** del juego o el `Sprite` de un evento), no este mod.
+3. **Sprite del mapa (charset)** — `Charset` del líder RPG, elegido por `stats.player` o el primer miembro de combate. Los actores usan el `Charset` de su `rpg_object`. El retrato y el `Image` de combate no eligen la hoja de caminar.
 
 ## Una definición de personaje
 
@@ -75,7 +75,7 @@ Las acciones son archivos JSON de tipo `action`. Este mod incluye las físicas b
 action party.add id=rpg_hero
 ```
 
-El personaje se une al grupo y al equipo de combate. Quien ya estaba en la plantilla conserva su nivel y su salud. RPG Demo usa esta línea para darte el héroe al entrar por primera vez en el pueblo.
+El personaje se une al grupo y al equipo de combate. Quien ya estaba en la plantilla conserva su nivel y su salud. RPG Plus usa esta línea para darte el héroe al entrar por primera vez en el pueblo.
 
 ## Si algo falla
 
