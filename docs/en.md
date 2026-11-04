@@ -23,7 +23,7 @@ A character can appear in three ways, and each comes from a different place:
 
 1. **Dialog portrait (avatar)** — a picture in a mod's `avatars/` folder, chosen per line in a scenario: `text "…" first=marao/sad` fills the first portrait place, `second=…` the second (for a dialog between two people). It is not tied to a character definition.
 2. **Character image** — the `Image` of the character definition, shown on cards in this panel and in battles.
-3. **Map sprite (charset)** — the walking sprite on tile maps, chosen by the RPG mod (the game's **Appearance** setting or an event's `Sprite`), not by this mod.
+3. **Map sprite (charset)** — the RPG party leader's character `Charset`, selected by `stats.player` or the first battle-party member. Actors use the `Charset` of their `rpg_object`. Dialog portraits and battle `Image` do not select a walking sheet.
 
 ## A character definition
 
@@ -75,7 +75,7 @@ Actions are JSON files of kind `action`. This mod ships the basic physical ones 
 action party.add id=rpg_hero
 ```
 
-The character joins the party and the battle set. Someone already in the roster keeps their level and health. RPG Demo uses this line to give the player the hero when the village is first entered.
+The character joins the party and the battle set. Someone already in the roster keeps their level and health. RPG Plus uses this line to give the player the hero when the village is first entered.
 
 ## If something goes wrong
 

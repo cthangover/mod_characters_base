@@ -23,7 +23,7 @@ Một nhân vật có thể xuất hiện theo ba cách, và mỗi cách đến 
 
 1. **Chân dung hội thoại (avatar)** — một ảnh trong thư mục `avatars/` của mod, chọn theo từng câu trong kịch bản: `text "…" first=marao/sad` chiếm chỗ chân dung thứ nhất, `second=…` chỗ thứ hai (hội thoại hai người). Nó không dính vào định nghĩa nhân vật.
 2. **Ảnh nhân vật** — trường `Image` của định nghĩa, hiện trên các thẻ trong bảng này và trong trận chiến.
-3. **Sprite bản đồ (charset)** — sprite biết đi trên bản đồ tile; do mod RPG chọn (thiết lập **Diện mạo** của game hoặc trường `Sprite` của sự kiện), không phải mod này.
+3. **Sprite bản đồ (charset)** — `Charset` của trưởng nhóm RPG do `stats.player` hoặc thành viên chiến đấu đầu tiên chọn. Actor dùng `Charset` trong `rpg_object`. Chân dung hội thoại và `Image` chiến đấu không chọn sheet đi bộ.
 
 ## Định nghĩa nhân vật
 
@@ -75,7 +75,7 @@ Hành động là tệp JSON kind `action`. Mod này có sẵn các hành độn
 action party.add id=rpg_hero
 ```
 
-Nhân vật gia nhập đội và danh sách ra trận. Ai đã có trong danh sách thì giữ nguyên cấp và máu. RPG Demo dùng dòng này để trao nhân vật chính cho người chơi khi lần đầu bước vào ngôi làng.
+Nhân vật gia nhập đội và danh sách ra trận. Ai đã có trong danh sách thì giữ nguyên cấp và máu. RPG Plus dùng dòng này để trao nhân vật chính cho người chơi khi lần đầu bước vào ngôi làng.
 
 ## Khi có trục trặc
 
