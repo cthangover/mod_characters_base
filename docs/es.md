@@ -63,7 +63,7 @@ Las acciones son archivos JSON de tipo `action`. Este mod incluye las físicas b
   "Description": "characters/action/physics_attack/description",
   "Image": "characters/actions/physics_attack",
   "Type": "ToEnemy",
-  "Values": ["RequiredPoint=1", "Attack=1.0", "AttackType=Physics"]
+  "Values": ["RequiredPoint>=0.1.0", "Attack>=0.1.0", "AttackType=Physics"]
 }
 ```
 

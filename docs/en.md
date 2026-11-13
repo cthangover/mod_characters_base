@@ -63,7 +63,7 @@ Actions are JSON files of kind `action`. This mod ships the basic physical ones 
   "Description": "characters/action/physics_attack/description",
   "Image": "characters/actions/physics_attack",
   "Type": "ToEnemy",
-  "Values": ["RequiredPoint=1", "Attack=1.0", "AttackType=Physics"]
+  "Values": ["RequiredPoint>=0.1.0", "Attack>=0.1.0", "AttackType=Physics"]
 }
 ```
 

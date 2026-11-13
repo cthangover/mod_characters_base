@@ -1,14 +1,14 @@
 {
   "id": "characters_base",
   "name": "Characters Engine",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "author": "ct",
   "description": "Characters engine: heroes, companions and enemies with their battle attributes and action cards, the character actions panel and dialog portraits.",
   "category": "engine, library",
   "sources": [
     "src/**/*.cs"
   ],
-  "depends": ["shell2d_base>=1", "ui_base>=1"],
+  "depends": ["shell2d_base>=0.1.0", "ui_base>=0.1.0"],
   "ui": [
     {
       "id": "characters",
