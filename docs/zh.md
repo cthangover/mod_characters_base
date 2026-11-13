@@ -63,7 +63,7 @@ Characters Engine 决定谁参加战斗：主角、同伴和敌人，以及他�
   "Description": "characters/action/physics_attack/description",
   "Image": "characters/actions/physics_attack",
   "Type": "ToEnemy",
-  "Values": ["RequiredPoint=1", "Attack=1.0", "AttackType=Physics"]
+  "Values": ["RequiredPoint>=0.1.0", "Attack>=0.1.0", "AttackType=Physics"]
 }
 ```
 
