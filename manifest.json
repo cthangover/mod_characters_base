@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "author": "ct",
   "description": "Characters engine: heroes, companions and enemies with their battle attributes and action cards, the character actions panel and dialog portraits.",
-  "category": "engine, library",
+  "categories": ["engine", "library"],
   "sources": [
     "src/**/*.cs"
   ],
