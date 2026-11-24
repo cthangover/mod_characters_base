@@ -8,6 +8,8 @@ using Godot;
 
 namespace Cthangover.Core.Factories.Impls
 {
+    using Cthangover.Core.Mods.Memory;
+
     /// <summary>
     /// Factory for full character definitions. Returns a <b>copy</b> of
     /// the cached <c>Character</c> on every <c>Get</c> call because
@@ -40,6 +42,7 @@ namespace Cthangover.Core.Factories.Impls
         {
             var size = ModConfig.Instance.Cache.GetCacheSize("characters", 128);
             _cache = new BoundedCache<string, Character>(size, this);
+            ModMemoryService.Shared.TryFor(typeof(CharacterFactory).Assembly)?.TrackInstance("factory.characters", _cache);
         }
 
         Character ICacheLoader<string, Character>.Load(string id)

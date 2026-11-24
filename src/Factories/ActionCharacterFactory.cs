@@ -7,6 +7,8 @@ using Godot;
 
 namespace Cthangover.Core.Factories.Impls
 {
+    using Cthangover.Core.Mods.Memory;
+
     /// <summary>
     /// Factory for battle action cards equipped by characters. Returns a
     /// <b>copy</b> of the cached <c>ActionCharacter</c> on every <c>Get</c>
@@ -38,6 +40,7 @@ namespace Cthangover.Core.Factories.Impls
         {
             var size = ModConfig.Instance.Cache.GetCacheSize("actions", 128);
             _cache = new BoundedCache<string, ActionCharacter>(size, this);
+            ModMemoryService.Shared.TryFor(typeof(ActionCharacterFactory).Assembly)?.TrackInstance("factory.actions", _cache);
         }
 
         ActionCharacter ICacheLoader<string, ActionCharacter>.Load(string id)
